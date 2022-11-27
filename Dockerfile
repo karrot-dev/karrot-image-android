@@ -1,6 +1,4 @@
-FROM circleci/android:api-28-node8-alpha
+FROM cimg/android:2022.09-node
 
-RUN sudo apt-get update && sudo apt-get install -y gradle rsync
+RUN sudo apt-get update && sudo apt-get install -y rsync
 RUN (cd / && sudo npm install -g cordova)
-
-RUN yes | sdkmanager --update
